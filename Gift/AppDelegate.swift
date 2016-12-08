@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -61,9 +62,72 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        self.saveContext()
     }
-
+    // MARK: - Core Data stack
+    //拿到沙盒目录下Documents的文件路径，放到url中返回
+    lazy var applicationDocumentsDirectory: NSURL = {
+        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+        return urls[urls.count-1]
+    }()
+    
+    //初始化NSManagedObjectModel，他是用来管理Entity的，代表模型文件
+    lazy var managedObjectModel: NSManagedObjectModel = {
+        let modelURL = NSBundle.mainBundle().URLForResource("CoreDataModel", withExtension: "momd")!
+        return NSManagedObjectModel(contentsOfURL: modelURL)!
+    }()
+    
+    //初始化persistentStoreCoordinator对象，用来添加持久化库（数据库SQLite）
+    lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
+        //创建NSPersistentStoreCoordinator，把NSManagedObjectModel传递过去
+        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
+        //数据库所在路径，"SingleViewCoreData.sqlite"是数据库的名字
+        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("SingleViewCoreData.sqlite")
+        var failureReason = "There was an error creating or loading the application's saved data."
+        do {
+            //在url对应的路径下，添加数据库
+            try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+        } catch {
+            // 如果创建失败在下面打印错误
+            var dict = [String: AnyObject]()
+            dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
+            dict[NSLocalizedFailureReasonErrorKey] = failureReason
+            
+            dict[NSUnderlyingErrorKey] = error as NSError
+            let wrappedError = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
+            NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
+            abort()
+        }
+        
+        return coordinator
+    }()
+    
+    //初始化NSManagedObjectContext对象，用来处理persistentStoreCoordinator和managedObjectModel之间的逻辑
+    lazy var managedObjectContext: NSManagedObjectContext = {
+        let coordinator = self.persistentStoreCoordinator
+        //初始化对象
+        var managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+        //关联上persistentStoreCoordinator
+        managedObjectContext.persistentStoreCoordinator = coordinator
+        return managedObjectContext
+    }()
+    
+    //让managedObjectContext与数据库同步
+    func saveContext () {
+        if managedObjectContext.hasChanges {
+            do {
+                //让managedObjectContext与数据库同步
+                try managedObjectContext.save()
+            } catch {
+                //同步失败的时候打印的错误
+                let nserror = error as NSError
+                NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+                abort()
+            }
+        }
+    }
+    
+    
 
 }
 

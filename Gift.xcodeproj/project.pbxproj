@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7F1DC031DF96E4C00D4FA91 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7F1DBFD1DF96E4C00D4FA91 /* CoreDataModel.xcdatamodeld */; };
+		A7F1DC041DF96E4C00D4FA91 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F1DBFF1DF96E4C00D4FA91 /* DataBase.swift */; };
+		A7F1DC051DF96E4C00D4FA91 /* DataEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F1DC001DF96E4C00D4FA91 /* DataEntity+CoreDataProperties.swift */; };
+		A7F1DC061DF96E4C00D4FA91 /* DataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F1DC011DF96E4C00D4FA91 /* DataEntity.swift */; };
+		A7F1DC071DF96E4C00D4FA91 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F1DC021DF96E4C00D4FA91 /* DataModel.swift */; };
+		A7F1DC0A1DF96F0700D4FA91 /* SearchBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F1DC081DF96F0700D4FA91 /* SearchBarCell.swift */; };
+		A7F1DC0B1DF96F0700D4FA91 /* SearchBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F1DC091DF96F0700D4FA91 /* SearchBarCell.xib */; };
+		A7F1DC0D1DF970E400D4FA91 /* PointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F1DC0C1DF970E400D4FA91 /* PointViewController.swift */; };
 		BC1BA8351DC3401500B01597 /* GongLueHeadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1BA8331DC3401500B01597 /* GongLueHeadCell.swift */; };
 		BC1BA8361DC3401500B01597 /* GongLueHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1BA8341DC3401500B01597 /* GongLueHeadCell.xib */; };
 		BC1BA8381DC347E100B01597 /* GongLueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1BA8371DC347E100B01597 /* GongLueModel.swift */; };
@@ -1075,6 +1083,14 @@
 		28701B99A7CF32FF6A4EEA57 /* Pods-Gift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gift/Pods-Gift.release.xcconfig"; sourceTree = "<group>"; };
 		5A08CDEF528422A28C7B71EF /* Pods_Gift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		781F48A0319638622D2B0C3B /* Pods-Gift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gift/Pods-Gift.debug.xcconfig"; sourceTree = "<group>"; };
+		A7F1DBFE1DF96E4C00D4FA91 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		A7F1DBFF1DF96E4C00D4FA91 /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
+		A7F1DC001DF96E4C00D4FA91 /* DataEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A7F1DC011DF96E4C00D4FA91 /* DataEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntity.swift; sourceTree = "<group>"; };
+		A7F1DC021DF96E4C00D4FA91 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		A7F1DC081DF96F0700D4FA91 /* SearchBarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarCell.swift; sourceTree = "<group>"; };
+		A7F1DC091DF96F0700D4FA91 /* SearchBarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBarCell.xib; sourceTree = "<group>"; };
+		A7F1DC0C1DF970E400D4FA91 /* PointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointViewController.swift; sourceTree = "<group>"; };
 		BC1BA8331DC3401500B01597 /* GongLueHeadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GongLueHeadCell.swift; sourceTree = "<group>"; };
 		BC1BA8341DC3401500B01597 /* GongLueHeadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GongLueHeadCell.xib; sourceTree = "<group>"; };
 		BC1BA8371DC347E100B01597 /* GongLueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GongLueModel.swift; sourceTree = "<group>"; };
@@ -2161,6 +2177,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A7F1DBFC1DF96E4C00D4FA91 /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				A7F1DBFD1DF96E4C00D4FA91 /* CoreDataModel.xcdatamodeld */,
+				A7F1DBFF1DF96E4C00D4FA91 /* DataBase.swift */,
+				A7F1DC001DF96E4C00D4FA91 /* DataEntity+CoreDataProperties.swift */,
+				A7F1DC011DF96E4C00D4FA91 /* DataEntity.swift */,
+				A7F1DC021DF96E4C00D4FA91 /* DataModel.swift */,
+			);
+			path = coreData;
+			sourceTree = "<group>";
+		};
 		AF2D44E152E1B2EDBD70E055 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2249,6 +2277,7 @@
 		BC9243161DB7B96100CC575A /* Gift */ = {
 			isa = PBXGroup;
 			children = (
+				A7F1DBFC1DF96E4C00D4FA91 /* coreData */,
 				BC9243471DB7B98000CC575A /* Resource */,
 				BC6D276A1DBA091400C9C566 /* Public */,
 				BC9243461DB7B97400CC575A /* Protocol */,
@@ -2259,6 +2288,8 @@
 				BC92434B1DB7BAD300CC575A /* Hot */,
 				BC92434C1DB7BADB00CC575A /*  Classify */,
 				BC92434D1DB7BB2800CC575A /* Setting */,
+				BC9243171DB7B96100CC575A /* AppDelegate.swift */,
+				BC9243191DB7B96100CC575A /* ViewController.swift */,
 				BC92431B1DB7B96100CC575A /* Main.storyboard */,
 				BC6C8A1E1DDB0D6600CF25EA /* Assets.xcassets */,
 				BC9243201DB7B96100CC575A /* LaunchScreen.storyboard */,
@@ -2288,8 +2319,6 @@
 		BC9243451DB7B96800CC575A /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				BC9243171DB7B96100CC575A /* AppDelegate.swift */,
-				BC9243191DB7B96100CC575A /* ViewController.swift */,
 				BC6D27741DBA179600C9C566 /* JLScrollView.swift */,
 				BC6D27761DBA17BC00C9C566 /* ScrollViewCell.swift */,
 				BC6D27781DBA17D800C9C566 /* HeaderView.swift */,
@@ -2405,6 +2434,8 @@
 		BCEE7F7F1DDD615300159B3C /* view */ = {
 			isa = PBXGroup;
 			children = (
+				A7F1DC081DF96F0700D4FA91 /* SearchBarCell.swift */,
+				A7F1DC091DF96F0700D4FA91 /* SearchBarCell.xib */,
 				BCEE7F831DDDDF1A00159B3C /* SearchBarSubCell.swift */,
 				BCEE7F841DDDDF1A00159B3C /* SearchBarSubCell.xib */,
 			);
@@ -3497,6 +3528,7 @@
 		BCFDABF81DB908D600A358E9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A7F1DC0C1DF970E400D4FA91 /* PointViewController.swift */,
 				BCFDABFF1DB9095100A358E9 /* SettingViewController.swift */,
 			);
 			name = Controller;
@@ -4113,6 +4145,7 @@
 				BCFDA8A11DB9083200A358E9 /* btn_increase_disabled@3x.png in Resources */,
 				BCFDA94B1DB9083200A358E9 /* homechannel_matte_left_nightmode@3x.png in Resources */,
 				BCFDAA4D1DB9083200A358E9 /* image_preview_thumbnail@3x.png in Resources */,
+				A7F1DC0B1DF96F0700D4FA91 /* SearchBarCell.xib in Resources */,
 				BCFDA9C61DB9083200A358E9 /* icon_point@2x.png in Resources */,
 				BCFDA9A51DB9083200A358E9 /* icon_giftlist_more@3x.png in Resources */,
 				BCFDA8781DB9083200A358E9 /* btn_add_unable_ipad@2x.png in Resources */,
@@ -4670,8 +4703,11 @@
 			files = (
 				BC92431A1DB7B96100CC575A /* ViewController.swift in Sources */,
 				BCC6E0E11DCA2B8E00AC2C28 /* SKUHeadView.swift in Sources */,
+				A7F1DC031DF96E4C00D4FA91 /* CoreDataModel.xcdatamodeld in Sources */,
 				BC6D27771DBA17BC00C9C566 /* ScrollViewCell.swift in Sources */,
 				BCDBDE6C1DBF4F93005EA93E /* DailyViewController.swift in Sources */,
+				A7F1DC0D1DF970E400D4FA91 /* PointViewController.swift in Sources */,
+				A7F1DC071DF96E4C00D4FA91 /* DataModel.swift in Sources */,
 				BC6D27751DBA179600C9C566 /* JLScrollView.swift in Sources */,
 				BCD172E81DC7330200CC5C8C /* GongLueSortSubCell.swift in Sources */,
 				BC6D276F1DBA170200C9C566 /* JLNavigationProtocol.swift in Sources */,
@@ -4689,6 +4725,7 @@
 				BC6D27731DBA173B00C9C566 /* JLTableViewProtocol.swift in Sources */,
 				BC1BA8381DC347E100B01597 /* GongLueModel.swift in Sources */,
 				BCFDA47E1DB907E300A358E9 /* PresentModel.swift in Sources */,
+				A7F1DC041DF96E4C00D4FA91 /* DataBase.swift in Sources */,
 				BCE8B1291DC1F79200632739 /* SubTableViewController.swift in Sources */,
 				BCDBDE6E1DBF4FA6005EA93E /* Top100ViewController.swift in Sources */,
 				BCFDA4661DB8E5D400A358E9 /* CollectionView+ScrollView.swift in Sources */,
@@ -4696,6 +4733,7 @@
 				BCFDAC001DB9095100A358E9 /* SettingViewController.swift in Sources */,
 				BCD95C3C1DC0E9CD002576AE /* GongLueViewController.swift in Sources */,
 				BC1BA8351DC3401500B01597 /* GongLueHeadCell.swift in Sources */,
+				A7F1DC061DF96E4C00D4FA91 /* DataEntity.swift in Sources */,
 				BC6D276D1DBA169A00C9C566 /* Theme.swift in Sources */,
 				BCD95C3E1DC0EDB1002576AE /* ClassifyHeadView.swift in Sources */,
 				BC6D27791DBA17D800C9C566 /* HeaderView.swift in Sources */,
@@ -4705,6 +4743,7 @@
 				BC9243601DB7C01E00CC575A /* HeadModel.swift in Sources */,
 				BC9022101DDC886F0080DE2D /* SKLaunchMenuItem.swift in Sources */,
 				BCDBDE701DBF4FDD005EA93E /* OriginalityViewController.swift in Sources */,
+				A7F1DC0A1DF96F0700D4FA91 /* SearchBarCell.swift in Sources */,
 				BCDBDE7E1DBF64D5005EA93E /* JLCollectionViewProtocol.swift in Sources */,
 				BCD172ED1DC74A9D00CC5C8C /* GongLueTargetSubView.swift in Sources */,
 				BCEB92ED1DC5E93B005A8001 /* GongLueHeadSubView.swift in Sources */,
@@ -4717,6 +4756,7 @@
 				BC9243181DB7B96100CC575A /* AppDelegate.swift in Sources */,
 				BCFDABFE1DB9093700A358E9 /* ClassifyViewController.swift in Sources */,
 				BCC932201DCB441D00BB6F74 /* SKUSubCell.swift in Sources */,
+				A7F1DC051DF96E4C00D4FA91 /* DataEntity+CoreDataProperties.swift in Sources */,
 				BCE8B1251DC1F4DF00632739 /* SKUModel.swift in Sources */,
 				BCC9321B1DCB3E3C00BB6F74 /* SKUSubController.swift in Sources */,
 				BCD172EB1DC7341300CC5C8C /* GongLueAllSubModel.swift in Sources */,
@@ -4993,6 +5033,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A7F1DBFD1DF96E4C00D4FA91 /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A7F1DBFE1DF96E4C00D4FA91 /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = A7F1DBFE1DF96E4C00D4FA91 /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BC92430C1DB7B96100CC575A /* Project object */;
 }

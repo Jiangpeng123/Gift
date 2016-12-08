@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchBarCellId" id="KGk-i7-Jjw" customClass="SearchBarCell" customModule="Gift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="39"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_clock_search@1x.png" translatesAutoresizingMaskIntoConstraints="NO" id="sQs-2p-bID">
+                        <rect key="frame" x="10" y="8" width="24" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="85D-cG-bgl"/>
+                            <constraint firstAttribute="height" constant="23" id="EmL-bc-0mW"/>
+                            <constraint firstAttribute="width" constant="24" id="XlV-l0-Y5x"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="85D-cG-bgl"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDI-s1-Pxr">
+                        <rect key="frame" x="44" y="10" width="321" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="d0U-G8-McY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="d0U-G8-McY"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="sQs-2p-bID" secondAttribute="bottom" constant="8" id="6bZ-sG-6ih"/>
+                    <constraint firstItem="SDI-s1-Pxr" firstAttribute="leading" secondItem="sQs-2p-bID" secondAttribute="trailing" constant="10" id="FLf-45-JHe"/>
+                    <constraint firstItem="sQs-2p-bID" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="INQ-TP-MqX"/>
+                    <constraint firstItem="SDI-s1-Pxr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="J4y-Bh-D6n"/>
+                    <constraint firstItem="sQs-2p-bID" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="WjU-Yt-tVI"/>
+                    <constraint firstAttribute="trailing" secondItem="SDI-s1-Pxr" secondAttribute="trailing" constant="10" id="l7j-ON-9en"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="6bZ-sG-6ih"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="leftImageView" destination="sQs-2p-bID" id="iwf-8y-xZJ"/>
+                <outlet property="titleLabel" destination="SDI-s1-Pxr" id="p8p-Nc-3Dk"/>
+            </connections>
+            <point key="canvasLocation" x="306.5" y="317"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_clock_search@1x.png" width="7" height="7"/>
+    </resources>
+</document>
